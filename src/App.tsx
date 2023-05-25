@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FC } from "react";
 import "./index.css";
-import axios from "axios";
 
 const App: FC = () => {
   const questions = [
@@ -282,7 +281,7 @@ const App: FC = () => {
   const [answers, setAnswers] = useState(0);
   const [show, setShow] = useState(true);
   const [currentQuest, setCurrentQuest] = useState(1);
-  const Check = (correct) => {
+  const Check = (correct: boolean) => {
     setAnswers(answers + 1);
     setQuests(quests + 1);
     if (correct) {
